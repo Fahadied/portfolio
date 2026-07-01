@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waliullah Fahad — Business Development & Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0c0c0e;
+  --surface: #13131a;
+  --surface2: #1a1a24;
+  --border: rgba(255,255,255,0.08);
+  --border-blue: rgba(59,130,246,0.25);
+  --text: #f0f0f0;
+  --muted: #7a7a8c;
+  --muted2: #9898aa;
+  --blue: #3b82f6;
+  --blue-dark: #1d4ed8;
+  --max: 1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(12,12,14,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.15s;
+  font-weight: 400;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--blue);
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500 !important;
+  transition: background 0.15s !important;
+}
+.nav-cta:hover { background: var(--blue-dark) !important; color: #fff !important; }
+
+/* SECTIONS */
+section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+.section-sep {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* EYEBROW */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+}
+
+/* HERO */
+#home {
+  padding-top: 9rem;
+  padding-bottom: 5rem;
+}
+.hero-roles {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.hero-role {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--muted2);
+}
+.hero-role svg { color: var(--blue); flex-shrink: 0; }
+.hero-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.6rem;
+}
+h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+h1 span { color: var(--blue); }
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--muted2);
+  max-width: 540px;
+  margin-bottom: 2.25rem;
+  font-weight: 300;
+}
+.hero-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--blue-dark); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: var(--text);
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+.hero-tagline {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* STATS BAR */
+.stats-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.stats-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+@media (max-width: 640px) { .stats-inner { grid-template-columns: repeat(2,1fr); } }
+.stat svg { color: var(--blue); margin-bottom: 0.75rem; }
+.stat-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.stat-sub { font-size: 12px; color: var(--muted); }
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+.about-grid p {
+  color: var(--muted2);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* CAPABILITIES */
+.caps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+@media (max-width: 700px) { .caps-grid { grid-template-columns: 1fr; } }
+.cap-card {
+  background: var(--surface);
+  padding: 2rem 1.75rem;
+  transition: background 0.15s;
+}
+.cap-card:hover { background: var(--surface2); }
+.cap-icon {
+  color: var(--blue);
+  margin-bottom: 1.1rem;
+}
+.cap-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.cap-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* EXPERIENCE */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  transition: border-color 0.15s;
+}
+.exp-card:hover { border-color: var(--border-blue); }
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.exp-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: rgba(59,130,246,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.exp-role { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.exp-org { font-size: 13px; color: var(--blue); font-weight: 500; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.exp-bullets li {
+  font-size: 14px;
+  color: var(--muted2);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.exp-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: 10px;
+  top: 4px;
+}
+.exp-more {
+  text-align: center;
+  padding: 1.25rem;
+  color: var(--muted);
+  font-size: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+}
+
+/* VENTURES */
+.ventures-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 560px) { .ventures-grid { grid-template-columns: 1fr; } }
+.venture-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.venture-card:hover { border-color: var(--border-blue); }
+.venture-header { display: flex; align-items: center; gap: 12px; }
+.venture-logo {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 15px;
+  flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+}
+.venture-logo-neuvante { background: rgba(180,140,90,0.15); color: #b8945a; }
+.venture-logo-gs { background: rgba(34,197,94,0.12); color: #22c55e; }
+.venture-name { font-size: 17px; font-weight: 600; color: var(--text); }
+.venture-tagline { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.venture-desc { font-size: 13px; color: var(--muted2); line-height: 1.7; }
+.venture-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.venture-badge {
+  font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 20px;
+}
+.badge-gold { background: rgba(180,140,90,0.15); color: #b8945a; }
+.badge-green { background: rgba(34,197,94,0.12); color: #22c55e; }
+.badge-blue-v { background: rgba(59,130,246,0.12); color: #60a5fa; }
+.venture-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 500; color: var(--blue);
+  text-decoration: none; margin-top: auto;
+  transition: opacity 0.15s;
+}
+.venture-link:hover { opacity: 0.75; }
+.venture-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 0.5px solid var(--border);
+}
+.venture-stat-label { font-size: 11px; color: var(--muted); margin-bottom: 1px; }
+.venture-stat-value { font-size: 13px; font-weight: 600; color: var(--text); }
+
+/* TOOLS / STACK */
+.tools-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  width: 110px;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.tool-card:hover { border-color: var(--border-blue); background: var(--surface2); }
+.tool-card svg { color: var(--blue); margin-bottom: 0.6rem; }
+.tool-name { font-size: 12px; color: var(--muted2); font-weight: 400; }
+
+/* HOW I WORK */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 700px) { .process-grid { grid-template-columns: repeat(2,1fr); } }
+.process-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  position: relative;
+  text-align: center;
+  transition: border-color 0.15s;
+}
+.process-card:hover { border-color: var(--border-blue); }
+.process-num {
+  position: absolute;
+  top: 1rem; right: 1.1rem;
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+.process-icon { color: var(--blue); margin-bottom: 0.85rem; }
+.process-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.process-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* CONTACT CTA */
+.contact-cta {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.contact-cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.contact-cta-inner h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+.contact-cta-inner p {
+  color: var(--muted2);
+  max-width: 500px;
+  margin: 0 auto 2.25rem;
+  font-size: 15px;
+  font-weight: 300;
+}
+.contact-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">W.F</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#ventures">Ventures</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-name">Waliullah Fahad</div>
+  <div class="hero-roles">
+    <div class="hero-role">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      Marketing Manager at AsmaTec Inc. (USA)
+    </div>
+    <div class="hero-role">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      Lead Acquisition Associate at Vector3 LLC (USA)
+    </div>
+  </div>
+  <h1>I Help Businesses Acquire Clients,<br>Optimize Operations, and <span>Scale</span></h1>
+  <p class="hero-desc">Business development, marketing systems, and execution-focused strategy for businesses that want structured growth.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">
+      Let's Talk
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="#experience" class="btn-outline">View Experience</a>
+  </div>
+  <p class="hero-tagline">Working with US-based companies to drive client acquisition, improve systems, and support scalable growth.</p>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="stat-title">200+ B2B Clients</div>
+      <div class="stat-sub">Served</div>
+    </div>
+    <div class="stat">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <div class="stat-title">Business Development</div>
+      <div class="stat-sub">& Marketing</div>
+    </div>
+    <div class="stat">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <div class="stat-title">Multi-Venture</div>
+      <div class="stat-sub">Founder & Operator</div>
+    </div>
+    <div class="stat">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div class="stat-title">US-Based</div>
+      <div class="stat-sub">Service Companies</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="eyebrow">About</div>
+  <h2>Execution Over Theory</h2>
+  <div class="about-grid">
+    <p>I'm a business-focused operator with hands-on experience across marketing, business development, systems design, and operations. My work centers on helping businesses build structured approaches to client acquisition, streamline their workflows, and create repeatable growth systems.</p>
+    <p>From CRM automation to outreach strategy, I bring a practical, execution-first approach to every engagement. I've worked across multiple ventures and US-based companies, managing teams and building the operational infrastructure that supports sustainable growth.</p>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="eyebrow">Capabilities</div>
+  <h2>What I Deliver</h2>
+  <div class="caps-grid">
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+      </div>
+      <div class="cap-title">Business Development</div>
+      <p class="cap-desc">Identifying growth opportunities, building partnerships, and creating revenue pipelines through structured outreach.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="cap-title">Lead Acquisition</div>
+      <p class="cap-desc">Qualifying prospects, building outreach sequences, and converting leads into long-term client relationships.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="cap-title">Marketing Systems</div>
+      <p class="cap-desc">Designing and executing marketing workflows that align messaging with business goals and drive measurable results.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 12c0 1 .3 2 .7 2.8L2 17l3 1.5 1.2-2.5a9 9 0 0 0 11.6 0L19 18.5 22 17l-1.7-2.2c.4-.8.7-1.8.7-2.8s-.3-2-.7-2.8L22 7 19 5.5 17.8 8A9 9 0 0 0 6.2 8L5 5.5 2 7l1.7 2.2C3.3 10 3 11 3 12z"/></svg>
+      </div>
+      <div class="cap-title">CRM & Automation</div>
+      <p class="cap-desc">Implementing CRM platforms and automation tools to streamline sales processes and improve conversion rates.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="cap-title">Operations Support</div>
+      <p class="cap-desc">Building operational frameworks that reduce friction, improve team efficiency, and support scalable delivery.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="cap-title">Technical Execution</div>
+      <p class="cap-desc">Leveraging technical tools and platforms to support business systems, from web presence to workflow automation.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="eyebrow">Experience</div>
+  <h2>Professional Track</h2>
+  <div class="exp-list">
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <div>
+          <div class="exp-role">Marketing Manager</div>
+          <div class="exp-org">AsmaTec Inc. (USA)</div>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Developing and executing marketing strategies aligned with business growth objectives</li>
+        <li>Building client acquisition systems and outreach workflows</li>
+        <li>Aligning service offerings with market demand to drive revenue</li>
+        <li>Managing campaigns and optimizing conversion funnels</li>
+      </ul>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <div>
+          <div class="exp-role">Lead Acquisition Associate</div>
+          <div class="exp-org">Vector3 LLC (USA)</div>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Generating and qualifying leads for a web development service provider</li>
+        <li>Building outreach sequences and managing prospect pipelines</li>
+        <li>Supporting conversion-focused acquisition strategies</li>
+        <li>Coordinating with sales teams to optimize lead handoff processes</li>
+      </ul>
+    </div>
+    <div class="exp-more">+ Additional experience coming soon</div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- VENTURES -->
+<section id="ventures">
+  <div class="eyebrow">Ventures</div>
+  <h2>Businesses I've Built</h2>
+  <div class="ventures-grid">
+
+    <!-- Neuvante -->
+    <div class="venture-card">
+      <div class="venture-header">
+        <div class="venture-logo venture-logo-neuvante">N</div>
+        <div>
+          <div class="venture-name">Neuvante</div>
+          <div class="venture-tagline">Premium Fragrances · Co-founder</div>
+        </div>
+      </div>
+      <p class="venture-desc">Bangladesh's premium fragrance destination — curating 100% authentic perfumes from the world's top houses in full bottles and precision decants (3ml–30ml). Built to make luxury scents accessible and genuine.</p>
+      <div class="venture-badges">
+        <span class="venture-badge badge-gold">E-commerce</span>
+        <span class="venture-badge badge-gold">Luxury Retail</span>
+        <span class="venture-badge badge-gold">Active</span>
+      </div>
+      <div class="venture-stats">
+        <div>
+          <div class="venture-stat-label">Category</div>
+          <div class="venture-stat-value">D2C Retail</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Market</div>
+          <div class="venture-stat-value">Bangladesh</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Offerings</div>
+          <div class="venture-stat-value">Full bottles + Decants</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Guarantee</div>
+          <div class="venture-stat-value">100% Authentic</div>
+        </div>
+      </div>
+      <a href="https://perfume-kappa-puce.vercel.app/" target="_blank" rel="noopener" class="venture-link">
+        Visit Neuvante
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+
+    <!-- GreenSync -->
+    <div class="venture-card">
+      <div class="venture-header">
+        <div class="venture-logo venture-logo-gs">GS</div>
+        <div>
+          <div class="venture-name">GreenSync</div>
+          <div class="venture-tagline">CleanTech Startup · Business & Tech Development Lead</div>
+        </div>
+      </div>
+      <p class="venture-desc">A smart disposal and reward system tackling Bangladesh's waste crisis with IoT-enabled bins, real-time analytics dashboards, and gamified eco-points. Piloting at BRAC University with a path to city-scale deployment.</p>
+      <div class="venture-badges">
+        <span class="venture-badge badge-green">IoT / CleanTech</span>
+        <span class="venture-badge badge-green">Pre-seed</span>
+        <span class="venture-badge badge-blue-v">Hult Prize</span>
+        <span class="venture-badge badge-blue-v">ENFCC Finalist</span>
+      </div>
+      <div class="venture-stats">
+        <div>
+          <div class="venture-stat-label">Grants secured</div>
+          <div class="venture-stat-value">BDT 160K+</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Investment interest</div>
+          <div class="venture-stat-value">BDT 100K convertible</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Pilot</div>
+          <div class="venture-stat-value">BRAC University approved</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Target (Q4 2026)</div>
+          <div class="venture-stat-value">100 bins · 5 campuses</div>
+        </div>
+      </div>
+      <a href="https://www.greensync.live" target="_blank" rel="noopener" class="venture-link">
+        Visit GreenSync
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+
+    <!-- Kishimoto -->
+    <div class="venture-card">
+      <div class="venture-header">
+        <div class="venture-logo" style="background: rgba(220,38,38,0.12); color: #f87171;">鬼</div>
+        <div>
+          <div class="venture-name">Kishimoto</div>
+          <div class="venture-tagline">Anime Apparel · Founder</div>
+        </div>
+      </div>
+      <p class="venture-desc">An anime-inspired clothing brand selling graphic t-shirts for fans in Bangladesh. Designs rooted in iconic anime culture — built for a community that wears what they love.</p>
+      <div class="venture-badges">
+        <span class="venture-badge" style="background: rgba(220,38,38,0.1); color: #f87171;">Anime Apparel</span>
+        <span class="venture-badge" style="background: rgba(220,38,38,0.1); color: #f87171;">E-commerce</span>
+        <span class="venture-badge" style="background: rgba(220,38,38,0.1); color: #f87171;">Active</span>
+      </div>
+      <div class="venture-stats">
+        <div>
+          <div class="venture-stat-label">Facebook followers</div>
+          <div class="venture-stat-value">11K+</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Category</div>
+          <div class="venture-stat-value">Fashion / Apparel</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Product</div>
+          <div class="venture-stat-value">Anime graphic tees</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Market</div>
+          <div class="venture-stat-value">Bangladesh</div>
+        </div>
+      </div>
+      <a href="https://www.facebook.com/kishimotoclothing" target="_blank" rel="noopener" class="venture-link">
+        Visit Kishimoto
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+
+    <!-- Woodcraftnarts -->
+    <div class="venture-card">
+      <div class="venture-header">
+        <div class="venture-logo" style="background: rgba(180,100,30,0.15); color: #c87941;">⌘</div>
+        <div>
+          <div class="venture-name">Woodcraftnarts</div>
+          <div class="venture-tagline">Custom Woodcraft · Founder</div>
+        </div>
+      </div>
+      <p class="venture-desc">A custom woodcraft business producing precision-cut and engraved wood pieces using a Fox Alien Masuter Pro CNC machine. Expanding into laser engraving with the AlgoLaser Alpha MK2 — built for personalized, handcrafted products at scale.</p>
+      <div class="venture-badges">
+        <span class="venture-badge" style="background: rgba(180,100,30,0.12); color: #c87941;">CNC Woodcraft</span>
+        <span class="venture-badge" style="background: rgba(180,100,30,0.12); color: #c87941;">Laser Engraving</span>
+        <span class="venture-badge" style="background: rgba(180,100,30,0.12); color: #c87941;">Active</span>
+      </div>
+      <div class="venture-stats">
+        <div>
+          <div class="venture-stat-label">Category</div>
+          <div class="venture-stat-value">Custom Manufacturing</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Market</div>
+          <div class="venture-stat-value">Bangladesh</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Current machine</div>
+          <div class="venture-stat-value">Fox Alien Masuter Pro</div>
+        </div>
+        <div>
+          <div class="venture-stat-label">Expanding to</div>
+          <div class="venture-stat-value">AlgoLaser Alpha MK2</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- TOOLS / STACK -->
+<section id="tools">
+  <div class="eyebrow">Stack</div>
+  <h2>Systems I Work With</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <div class="tool-name">GoHighLevel</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <div class="tool-name">ManyChat</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <div class="tool-name">Canva</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <div class="tool-name">Claude Code</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+      <div class="tool-name">GitHub</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <div class="tool-name">Vercel</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div class="tool-name">Netlify</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+      <div class="tool-name">Supabase</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <div class="tool-name">Notion</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/></svg>
+      <div class="tool-name">Slack</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="tool-name">CapCut</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <div class="tool-name">Meta Ads Manager</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      <div class="tool-name">LightBurn</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <div class="tool-name">Arduino IDE</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      <div class="tool-name">Vectric Aspire</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="tool-name">HTML5 / CSS3</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      <div class="tool-name">Python</div>
+    </div>
+    <div class="tool-card">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2l2 3 2-3h2"/></svg>
+      <div class="tool-name">Java</div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-sep">
+
+<!-- HOW I WORK -->
+<section id="process">
+  <h2>How I Work</h2>
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-num">01</div>
+      <div class="process-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="process-title">Understand Goals</div>
+      <p class="process-desc">Define objectives and align on outcomes.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">02</div>
+      <div class="process-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="process-title">Build Structure</div>
+      <p class="process-desc">Design systems and workflows.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">03</div>
+      <div class="process-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      </div>
+      <div class="process-title">Improve Systems</div>
+      <p class="process-desc">Optimize for efficiency and scale.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">04</div>
+      <div class="process-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+      </div>
+      <div class="process-title">Support Growth</div>
+      <p class="process-desc">Execute and iterate for results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<div class="contact-cta" id="contact">
+  <div class="contact-cta-inner">
+    <div class="eyebrow">Get in Touch</div>
+    <h2>Let's build growth with structure.</h2>
+    <p>Whether you're a founder, business owner, or team looking for structured growth support — let's connect and explore how we can work together on client acquisition, systems, and operations.</p>
+    <div class="contact-actions">
+      <a href="mailto:waliullah.fahad@g.bracu.ac.bd" class="btn-primary">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        Email
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/waliullah-fahad-a1409329a/" target="_blank" rel="noopener" class="btn-outline">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/8801842670244" target="_blank" rel="noopener" class="btn-outline">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Waliullah Fahad · All rights reserved</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
